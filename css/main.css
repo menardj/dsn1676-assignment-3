@@ -20,7 +20,7 @@ html {
 .asteroid {
 	position: absolute;
 	background-image: url(../images/asteroid.svg);
-	top: 100px;
+	top: 200px;
 	left: 200px;
 	width: 200px;
 	height: 200px;
@@ -37,5 +37,59 @@ transform: rotate(0deg);
 100% {
 transform: rotate(360deg);
 }
+
+}
+
+.ship {
+	position: absolute;
+	background-image: url(../images/ship.svg);
+	top: 200px;
+	left: 500px;
+	width: 100px;
+	height: 100px;
+	background-size: contain;
+	animation: ship-float 10s ease-in-out alternate infinite;
+}
+
+@keyframes ship-float {
+
+0% {
+top: 200px;
+left: 500px;
+}
+
+20% {
+top: 280px;
+left: 420px;
+}
+
+40% {
+top: 200px;
+left: 400px;
+}
+
+60% {
+top: 200px;
+left: 520px;
+}
+
+80% {
+top: 300px;
+left: 420px;
+}
+
+100% {
+top: 140px;
+left: 490px;
+}
+
+}
+
+.stars {
+
+}
+
+@keyframes stars-move {
+
 
 }
