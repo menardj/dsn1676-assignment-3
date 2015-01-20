@@ -31,19 +31,18 @@ body {
 	width: 250px;
 	height: 250px;
 	background-size: contain;
+	-webkit-animation: asteroid-rotate 20s linear infinite;
 	animation: asteroid-rotate 20s linear infinite;
 }
 
+@-webkit-keyframes asteroid-rotate {
+	0% { -webkit-transform: rotate(0deg); }
+	100% { -webkit-transform: rotate(360deg); }
+}
+
 @keyframes asteroid-rotate {
-
-0% {
-transform: rotate(0deg);
-}
-
-100% {
-transform: rotate(360deg);
-}
-
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
 }
 
 .ship {
@@ -54,7 +53,42 @@ transform: rotate(360deg);
 	width: 100px;
 	height: 100px;
 	background-size: contain;
+	-webkit-animation: ship-float 8s ease-in-out infinite;
 	animation: ship-float 8s ease-in-out infinite;
+}
+
+@-webkit-keyframes ship-float {
+
+0% {
+top: 200px;
+left: 500px;
+}
+
+20% {
+top: 280px;
+left: 560px;
+}
+
+40% {
+top: 340px;
+left: 520px;
+}
+
+60% {
+top: 160px;
+left: 480px;
+}
+
+80% {
+top: 300px;
+left: 420px;
+}
+
+100% {
+top: 200px;
+left: 500px;
+}
+
 }
 
 @keyframes ship-float {
@@ -97,7 +131,24 @@ left: 500px;
 	height: 100vh;
 	background-image: url(../images/stars.svg);
 	background-color: black;
+	-webkit-animation: stars-move 5s ease-in-out alternate infinite;
 	animation: stars-move 5s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes stars-move {
+
+	0% {
+	transform: scale(1,1);
+}
+
+50% {
+		transform: scale(1.015,1.015);
+}
+
+100% {
+	transform: scale(1,1);
+}
+
 }
 
 @keyframes stars-move {
